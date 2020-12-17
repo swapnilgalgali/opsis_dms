@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run CommunityDMAdmin-communitydmadminui5",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/communitydmadmin-approuter/node_modules/@sap/html5-repo-mock/index.js",
+      "args": [
+        "--standalone",
+        "/nscommunitydmadminui5/index.html",
+        "--ui5",
+        "{\"version\":\".\"}"
+      ],
+      "cwd": "${workspaceFolder}/communitydmadminui5",
+      "env": {
+        "PORT": "6004",
+        "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
+        "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/CommunityDMAdmin/communitydmadminui5\"}"
+      },
+      "envFile": "${workspaceFolder}/communitydmadminui5/.env1",
+      "preLaunchTask": "Build CommunityDMAdmin"
+    }
+  ]
+}
